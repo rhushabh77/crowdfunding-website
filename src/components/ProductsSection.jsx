@@ -145,6 +145,9 @@ const ProductsSection = () => {
             </div>
           </div>
         </div>
+        <p className="text-2xl font-bold font- pb-8">
+          South African Honeymoon :
+        </p>
 
         {filteredProducts.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-xl shadow-sm">

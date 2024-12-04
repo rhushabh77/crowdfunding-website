@@ -54,7 +54,7 @@ const ContributionPage = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://192.168.1.4:5000/api/products/${id}`
+          `${import.meta.env.VITE_SERVER_DOMAIN}/api/products/${id}`
         );
         setProduct(response.data);
         calculateRemainingAmount(response.data);
@@ -197,7 +197,8 @@ const ContributionPage = () => {
       }
 
       const response = await axios.post(
-        `http://192.168.1.4:5000/api/contributions`,
+        `${import.meta.env.VITE_SERVER_DOMAIN}/api/contributions`,
+
         contributionData
       );
 

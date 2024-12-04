@@ -22,7 +22,7 @@ const ProductsSection = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "http://192.168.1.4:5000/api/products"
+          `${import.meta.env.VITE_SERVER_DOMAIN}/api/products`
         );
         // const response = await axios.get(
         //   "http://192.168.1.3:5000/api/products"

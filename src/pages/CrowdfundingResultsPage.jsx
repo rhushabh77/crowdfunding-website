@@ -90,7 +90,7 @@ const CrowdfundingResultsPage = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `${import.meta.env.VITE_SERVER_DOMAIN}/api/contributions`
+        `${import.meta.env.SERVER_DOMAIN}/api/contributions`
       );
 
       // Ensure the response structure is as expected

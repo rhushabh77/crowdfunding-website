@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Helicopter Tour at Sunset",
+      "description": "Experience breathtaking aerial views of the coastline at sunset",
+      "image": "https://placehold.co/600x400/1E40AF/FFFFFF/png?text=Helicopter+Tour",
+      "amount": {
+        "usd": 500,
+        "inr": 1000
+      },
+      "collected": 0,
+      "uniqueName": "helicopter-tour-at-sunset"
+    },
+    {
+      "id": 2,
+      "name": "Skydiving at Mossel Bay",
+      "description": "Adventure of a lifetime with a tandem skydive over scenic Mossel Bay",
+      "image": "https://placehold.co/600x400/DC2626/FFFFFF/png?text=Skydiving",
+      "amount": {
+        "usd": 400,
+        "inr": 33200
+      },
+      "collected": 400,
+      "uniqueName": "skydiving-at-mossel-bay"
+    },
+    {
+      "id": 3,
+      "name": "Walk with Lions",
+      "description": "Get up close with majestic African lions in a safe environment",
+      "image": "https://placehold.co/600x400/CA8A04/FFFFFF/png?text=Lion+Walk",
+      "amount": {
+        "usd": 600,
+        "inr": 49800
+      },
+      "collected": 0,
+      "uniqueName": "walk-with-lions"
+    },
+    {
+      "id": 4,
+      "name": "Shark Cage Diving",
+      "description": "Experience the thrill of diving with sharks in their natural habitat",
+      "image": "https://placehold.co/600x400/FF0000/FFFFFF/png?text=Shark+Cage+Diving",
+      "amount": {
+        "usd": 700,
+        "inr": 57900
+      },
+      "collected": 0,
+      "uniqueName": "shark-cage-diving"
+    },
+    {
+      "id": 5,
+      "name": "Bungee Jumping",
+      "description": "Take the leap of faith with a thrilling bungee jump experience",
+      "image": "https://placehold.co/600x400/00FF00/FFFFFF/png?text=Bungee+Jumping",
+      "amount": {
+        "usd": 300,
+        "inr": 24900
+      },
+      "collected": 0,
+      "uniqueName": "bungee-jumping"
+    },
+    {
+      "id": 6,
+      "name": "Hot Air Balloon Ride",
+      "description": "Soar above the ground with a serene hot air balloon ride",
+      "image": "https://placehold.co/600x400/FFFF00/FFFFFF/png?text=Hot+Air+Balloon+Ride",
+      "amount": {
+        "usd": 800,
+        "inr": 66400
+      },
+      "collected": 0,
+      "uniqueName": "hot-air-balloon-ride"
+    }
+  ]
+}

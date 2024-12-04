@@ -54,7 +54,7 @@ const ContributionPage = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.SERVER_DOMAIN}/api/products/${id}`
+          `https://crowdfunding-backend-3wkh.onrender.com/api/products/${id}`
         );
         setProduct(response.data);
         calculateRemainingAmount(response.data);
@@ -197,7 +197,7 @@ const ContributionPage = () => {
       }
 
       const response = await axios.post(
-        `${import.meta.env.SERVER_DOMAIN}/api/contributions`,
+        `https://crowdfunding-backend-3wkh.onrender.com/api/contributions`,
 
         contributionData
       );

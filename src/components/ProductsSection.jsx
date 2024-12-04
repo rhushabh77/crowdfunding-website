@@ -22,7 +22,7 @@ const ProductsSection = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.SERVER_DOMAIN}/api/products`
+          `https://crowdfunding-backend-3wkh.onrender.com/api/products`
         );
         // const response = await axios.get(
         //   "http://192.168.1.3:5000/api/products"

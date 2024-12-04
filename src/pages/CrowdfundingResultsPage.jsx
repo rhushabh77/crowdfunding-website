@@ -90,7 +90,7 @@ const CrowdfundingResultsPage = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `${import.meta.env.SERVER_DOMAIN}/api/contributions`
+        `https://crowdfunding-backend-3wkh.onrender.com/api/contributions`
       );
 
       // Ensure the response structure is as expected

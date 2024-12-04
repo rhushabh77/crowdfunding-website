@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import { ChevronLeft, DollarSign, ArrowRight, Copy } from "lucide-react";
+import {
+  ChevronLeft,
+  DollarSign,
+  ArrowRight,
+  Copy,
+  Loader2,
+} from "lucide-react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
@@ -16,6 +22,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { fetchExchangeRates } from "@/lib/exchangeRate";
+import Loader from "@/components/Loader";
 
 const ContributionPage = () => {
   const { id } = useParams();
@@ -25,6 +32,7 @@ const ContributionPage = () => {
   const [currency, setCurrency] = useState("usd");
   const [remainingAmount, setRemainingAmount] = useState(0);
   const [exchangeRate, setExchangeRate] = useState(84.69);
+  const [isLoading, setIsLoading] = useState(true);
 
   const {
     register,
@@ -53,6 +61,7 @@ const ContributionPage = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
+        setIsLoading(true);
         const response = await axios.get(
           `https://crowdfunding-backend-3wkh.onrender.com/api/products/${id}`
         );
@@ -60,6 +69,8 @@ const ContributionPage = () => {
         calculateRemainingAmount(response.data);
       } catch (error) {
         toast.error("Could not fetch product details");
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -213,6 +224,15 @@ const ContributionPage = () => {
       toast.error("Failed to submit contribution");
     }
   };
+
+  if (isLoading) {
+    return (
+      // <div className="flex justify-center items-center min-h-screen bg-gray-50">
+      //   <Loader2 className="w-12 h-12 animate-spin text-indigo-600" />
+      // </div>
+      <Loader />
+    );
+  }
 
   if (!product) {
     return (

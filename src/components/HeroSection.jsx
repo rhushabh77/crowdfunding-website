@@ -1,7 +1,7 @@
 import React from "react";
-import roundShapeImage from "../assets/couple.png";
-import logoImage from "../../public/logo.svg";
-import backgroundImage from "@/assets/coupleimg.jpg";
+import roundShapeImage from "../assets/couple.webp";
+import logoImage from "../assets/logo.webp";
+import backgroundImage from "@/assets/coupleimg.webp";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
@@ -18,7 +18,7 @@ const HeroSection = () => {
         <img
           src={logoImage}
           alt="Komal & Saksham Wedding Logo"
-          className="w-16 h-16 object-contain md:w-12 sm:w-10 xs:w-8"
+          className="w-16 h-16 object-contain md:w-20 sm:w-12 xs:w-10"
         />
       </div>
 

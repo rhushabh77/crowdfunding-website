@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight, Check, DollarSign, Search, Filter } from "lucide-react";
+import {
+  ChevronRight,
+  Check,
+  DollarSign,
+  Search,
+  Filter,
+  Loader2,
+} from "lucide-react";
 import axios from "axios";
 import {
   Select,
@@ -17,20 +24,20 @@ const ProductsSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [products, setProducts] = useState([]);
   const [exchangeRate, setExchangeRate] = useState(84.69);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        setIsLoading(true);
         const response = await axios.get(
           `https://crowdfunding-backend-3wkh.onrender.com/api/products`
         );
-        // const response = await axios.get(
-        //   "http://192.168.1.3:5000/api/products"
-        // );
-
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -149,7 +156,11 @@ const ProductsSection = () => {
           South African Honeymoon :
         </p>
 
-        {filteredProducts.length === 0 ? (
+        {isLoading ? (
+          <div className="flex justify-center items-center py-16">
+            <Loader2 className="w-12 h-12 animate-spin text-pink-600" />
+          </div>
+        ) : filteredProducts.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-xl shadow-sm">
             <p className="text-2xl text-gray-500 mb-4">No gifts found</p>
             <p className="text-gray-400">

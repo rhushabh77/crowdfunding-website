@@ -8,7 +8,8 @@ const MiniNavbar = () => {
       <ul className="flex space-x-4 items-center">
         <li>
           <Link
-            to="/"
+            to="https://www.zola.com/wedding/komalandsaksham "
+            target="_blank"
             className="text-gray-800 hover:text-gray-600 transition-colors duration-300 font-medium text-md"
           >
             Home

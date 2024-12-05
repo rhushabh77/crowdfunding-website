@@ -3,6 +3,7 @@ import roundShapeImage from "../assets/couple.webp";
 import logoImage from "../assets/logo.webp";
 import backgroundImage from "@/assets/coupleimg.webp";
 import { motion } from "framer-motion";
+import MiniNavbar from "./MiniNavbar";
 
 const HeroSection = () => {
   return (
@@ -13,6 +14,7 @@ const HeroSection = () => {
         backgroundBlendMode: "overlay",
       }}
     >
+      <MiniNavbar />
       {/* Logo Div */}
       <div className="absolute top-6 left-6 z-10 md:top-4 sm:top-2 xs:top-1">
         <img

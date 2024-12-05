@@ -103,7 +103,10 @@ const ProductsSection = () => {
     });
 
   return (
-    <section className="bg-gradient-to-tr from-violet-200 via-white to-violet-200 py-16 sm:py-24">
+    <section
+      id="registry"
+      className="bg-gradient-to-tr from-violet-200 via-white to-violet-200 py-16 sm:py-24"
+    >
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
           <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-6 sm:mb-0">

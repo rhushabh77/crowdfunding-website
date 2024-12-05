@@ -16,13 +16,20 @@ const HeroSection = () => {
     >
       <MiniNavbar />
       {/* Logo Div */}
-      <div className="absolute top-6 left-6 z-10 md:top-4 sm:top-2 xs:top-1">
+      <motion.a
+        href="https://www.zola.com/wedding/komalandsaksham"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute top-6 left-6 z-10 md:top-4 sm:top-2 xs:top-1"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
         <img
           src={logoImage}
           alt="Komal & Saksham Wedding Logo"
-          className="w-16 h-16 object-contain md:w-20 sm:w-12 xs:w-10"
+          className="w-16 h-16 object-contain md:w-20 sm:w-12 xs:w-10 cursor-pointer"
         />
-      </div>
+      </motion.a>
 
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-white/70 z-0" aria-hidden="true" />

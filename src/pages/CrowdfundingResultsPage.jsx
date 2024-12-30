@@ -90,7 +90,7 @@ const CrowdfundingResultsPage = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://crowdfunding-backend-two.vercel.app/api/contributions`
+        `https://crowdfunding-backend-eqp3.onrender.com/api/contributions`
       );
 
       // Ensure the response structure is as expected

@@ -31,7 +31,7 @@ const ProductsSection = () => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `https://crowdfunding-backend-3wkh.onrender.com/api/products`
+          `https://crowdfunding-backend-two.vercel.app/api/products`
         );
         setProducts(response.data);
       } catch (error) {

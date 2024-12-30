@@ -63,7 +63,7 @@ const ContributionPage = () => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `https://crowdfunding-backend-3wkh.onrender.com/api/products/${id}`
+          `https://crowdfunding-backend-two.vercel.app/${id}`
         );
         setProduct(response.data);
         calculateRemainingAmount(response.data);

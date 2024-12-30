@@ -63,7 +63,7 @@ const ContributionPage = () => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `https://komalandsaksham.vercel.app/api/products/${id}`
+          `https://crowdfunding-backend-eqp3.onrender.com/api/products/${id}`
         );
         setProduct(response.data);
         calculateRemainingAmount(response.data);
@@ -208,7 +208,7 @@ const ContributionPage = () => {
       }
 
       const response = await axios.post(
-        `https://crowdfunding-backend-eqp3.onrender.com/api/contributions`,
+        `https://crowdfunding-backend-3wkh.onrender.com/api/contributions`,
 
         contributionData
       );
